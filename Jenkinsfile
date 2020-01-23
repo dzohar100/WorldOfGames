@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        sh 'git checkout https://github.com/dzohar100/WorldOfGames'
+        sh 'git https://github.com/dzohar100/WorldOfGames'
       }
     }
     stage('Build') {
