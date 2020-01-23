@@ -6,6 +6,11 @@ pipeline {
         sh 'echo hello'
       }
     }
+    stage('Checkout') {
+      steps {
+        sh 'git clone https://github.com/dzohar100/WorldOfGames'
+      }
+    }
     stage('Build') {
       steps {
         sh 'cd ~'
