@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Run') {
       steps {
-        docker run --name wog -p 8777:8777 -d
+        sh 'docker run --name wog -p 8777:8777 -d'
       }
     }
     stage('Test') {
@@ -23,7 +23,7 @@ pipeline {
     }
     stage('Finalize') {
       steps {
-        docker exec -it wog bash
+        sh 'docker exec -it wog bash'
       }
     }
   }
