@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'docker build Dockerfile'
+        sh 'docker build /Users/DorZohar 1/.jenkins/workspace/wog_pipeline/Dockerfile'
       }
     }
     stage('Run') {
