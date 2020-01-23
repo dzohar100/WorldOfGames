@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'docker build https://github.com/dzohar100/WorldOfGames/blob/master/Dockerfile.git'
+        sh 'docker build https://github.com/dzohar100/WorldOfGames/blob/master/Dockerfile .'
       }
     }
     stage('Run') {
