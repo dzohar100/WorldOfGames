@@ -1,6 +1,8 @@
 from selenium import webdriver
 
 
+# The method gets a URL, opens it with Chromedriver, check if the score number is between 0-1000 and return true or
+# false.
 def test_scores_service(app_url):
     try:
         driver = webdriver.Chrome(executable_path="/Users/DorZohar 1/Desktop/Softwares/Chrome/chromedriver")
@@ -21,14 +23,17 @@ def test_scores_service(app_url):
         driver.close()
 
 
+# The method calls localhost on port 8777, test it with test_scores_service and return 0 if the test success and -1
+# if not.
 def main_function():
     call = test_scores_service("http://localhost:8777")
+    errornum = 0
     if call:
-        return 0
-    elif not call:
-        return -1
+        return errornum
     else:
-        return "Error"
+        errornum = -1
+        if errornum == -1:
+            return "Error"
 
 
 main_function()
