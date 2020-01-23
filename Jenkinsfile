@@ -7,7 +7,7 @@ pipeline {
       }}
     stage('Build') {
       steps {
-        docker build /Users/DorZohar 1/PycharmProjects/WorldOfGames/Dockerfile
+        docker build https://github.com/dzohar100/WorldOfGames/blob/master/Dockerfile
       }}
     stage('Run') {
       steps {
