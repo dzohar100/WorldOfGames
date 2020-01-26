@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Run') {
       steps {
-        sh 'docker run --name wog -p 8777:8777 -d'
+        sh 'docker run --name worldofgames_web -p 8777:8777 -d'
       }
     }
     stage('Test') {
@@ -23,7 +23,7 @@ pipeline {
     }
     stage('Finalize') {
       steps {
-        sh 'docker exec -it wog bash'
+        sh 'docker exec -it worldofgames_web bash'
       }
     }
   }
