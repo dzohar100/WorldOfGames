@@ -1,6 +1,6 @@
 FROM python:3
 
-RUN pip install flask:1.1.1
+RUN pip install flask
 RUN pip install selenium
 RUN pip install webdriver
 
