@@ -8,12 +8,12 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'docker build ~/PycharmProjects/WorldOfGames'
+        sh 'docker build ~/PycharmProjects/WorldOfGames .'
       }
     }
     stage('Run') {
       steps {
-        sh 'docker run --name worldofgames_web -p 8777:8777 -d'
+        sh 'docker run worldofgames_web -d'
       }
     }
     stage('Test') {
