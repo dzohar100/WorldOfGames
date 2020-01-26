@@ -8,8 +8,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'cd ~'
-        sh 'docker build PycharmProjects/WorldOfGames'
+        sh 'docker build ~/PycharmProjects/WorldOfGames'
       }
     }
     stage('Run') {
