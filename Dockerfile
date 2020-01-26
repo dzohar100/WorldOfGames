@@ -2,7 +2,6 @@ FROM python:3
 
 RUN pip install flask
 RUN pip install selenium
-RUN pip install webdriver
 
 ADD e2e.py /
 ADD GuessGame.py /
