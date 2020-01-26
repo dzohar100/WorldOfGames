@@ -1,11 +1,5 @@
 pipeline {
   agent any
-  stages {
-    stage('Checkout') {
-      steps {
-        sh 'echo hello'
-      }
-    }
     stage('Checkout') {
       steps {
         sh 'git clone https://github.com/dzohar100/WorldOfGames'
@@ -14,7 +8,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'cd ~'
-        sh 'docker build PycharmProjects/WorldOfGames/Dockerfile'
+        sh 'docker build PycharmProjects/WorldOfGames'
       }
     }
     stage('Run') {
