@@ -23,7 +23,7 @@ pipeline {
     }
     stage('Finalize') {
       steps {
-        sh 'docker exec -it worldofgames_web bash'
+        sh 'docker exec -it wog_pipeline_web bash'
       }
     }
   }
