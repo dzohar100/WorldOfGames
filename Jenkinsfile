@@ -8,12 +8,12 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'docker build ~/PycharmProjects/WorldOfGames -d'
+        sh 'docker build ~/PycharmProjects/WorldOfGames'
       }
     }
     stage('Run') {
       steps {
-        sh 'docker-compose up'
+        sh 'docker-compose  -d'
       }
     }
     stage('Test') {
