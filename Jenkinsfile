@@ -23,7 +23,7 @@ pipeline {
     }
     stage('Finalize') {
       steps {
-        sh 'docker exec -it wog_pipeline_web bash'
+        sh 'docker exec -it 67ba1e52f50d bash'
       }
     }
   }
