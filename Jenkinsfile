@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'docker build ~/PycharmProjects/WorldOfGames'
+        sh 'docker build ~/PycharmProjects/WorldOfGames -d'
       }
     }
     stage('Run') {
