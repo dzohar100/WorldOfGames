@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Run') {
       steps {
-        sh 'docker run worldofgames_web'
+        sh 'docker-compose up'
       }
     }
     stage('Test') {
