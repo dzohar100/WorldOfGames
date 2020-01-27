@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Run') {
       steps {
-        sh 'docker-compose up'
+        sh 'sudo docker-compose up'
       }
     }
     stage('Test') {
