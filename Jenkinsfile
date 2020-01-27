@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Run') {
       steps {
-        sh 'docker-compose  -d'
+        sh 'docker-compose up -d'
       }
     }
     stage('Test') {
